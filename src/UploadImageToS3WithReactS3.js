@@ -2,10 +2,10 @@ import React , {useState} from 'react';
 import { uploadFile } from 'react-s3';
 
 
-const S3_BUCKET ='escuelasayuri';
-const REGION ='us-east-1';
-const ACCESS_KEY ='AKIARSL2GM2QHAWIFSDW';
-const SECRET_ACCESS_KEY ='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';
+const S3_BUCKET =process.env.REACT_APP_BUCKET_NAME;
+const REGION =process.env.REACT_APP_REGION;
+const ACCESS_KEY =process.env.REACT_APP_ACCESS;
+const SECRET_ACCESS_KEY =process.env.REACT_APP_SECRET;
 
 window.Buffer = window.Buffer || require("buffer").Buffer;
 

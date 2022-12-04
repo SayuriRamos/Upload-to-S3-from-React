@@ -1,5 +1,7 @@
 import React from 'react';
 import Upload from './UploadImageToS3WithReactS3';
+import Site from './Site';
+
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 import {
@@ -30,7 +32,7 @@ const Sidebar = () => {
                 <NavLink exact to="./UploadImageToS3WithReactS3" activeClassName="activeClicked">
                 <CDBSidebarMenuItem icon="table">Alumnos</CDBSidebarMenuItem>
                 </NavLink>
-                <NavLink exact to="/profile" activeClassName="activeClicked">
+                <NavLink exact to="./Site" activeClassName="activeClicked">
                 <CDBSidebarMenuItem icon="user">Materias</CDBSidebarMenuItem>
                 </NavLink>
                 <NavLink exact to="/analytics" activeClassName="activeClicked">
@@ -51,6 +53,7 @@ const Sidebar = () => {
         </CDBSidebar>
         <Routes>
             <Route exact path='/UploadImageToS3WithReactS3' element={< Upload />}></Route>
+            <Route exact path='/Site' element={< Site />}></Route>
         </Routes>
         </div>
   );
