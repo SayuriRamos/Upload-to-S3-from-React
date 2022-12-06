@@ -1,5 +1,7 @@
 import React , {useState} from 'react';
 import { uploadFile } from 'react-s3';
+import './UploadImageToS3WithReactS3.css';
+
 
 
 const S3_BUCKET =process.env.REACT_APP_BUCKET_NAME;
@@ -30,11 +32,15 @@ const UploadImageToS3WithReactS3 = () => {
             .catch(err => console.error(err))
     }
 
-    return <div>
-        <div>React S3 File Upload</div>
+    return <div style={{color: "coral", margin:20}} >
+        <div style={{color: "BlueViolet"}}>React S3 File Upload</div>
+        <p ></p>
         <input type="file" onChange={handleFileInput}/>
-        <button onClick={() => handleUpload(selectedFile)}> Upload to S3</button>
+        <br></br>
+        <p></p>
+        <button style={{color: "black"}} id='button' onClick={() => handleUpload(selectedFile)}> Upload to S3</button>
     </div>
+    
 }
 
 export default UploadImageToS3WithReactS3;
